@@ -1,0 +1,5 @@
+<?php
+header("Content-Type: image/jpeg");
+$f = file_get_contents("loliclicker.js/img.jpg");
+echo $f;
+?>

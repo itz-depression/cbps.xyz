@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <link rel="manifest" href="manifest.json">
+    <title>Random Hentai JS</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <script src="hentai.js" async defer></script>
+    <div id="backdiv" class="backdiv"></div>
+    <div id="maindiv" class="maindiv">
+
+        <div class="mainimgdiv" id="mainimgdiv">
+            <img class="mainimg" id="mainimg" onclick="loadnew()" onload="imgisloadesd()"></img>
+        </div>
+        <a href="#" onclick="back()" class="previous button">&laquo;</a>
+        <a href="#" onclick="next()" class="next button">&raquo;</a>
+        <a href="#" onclick="loadnew()" class="new button">New</a>
+    
+        <div id="btndiv" class="btndiv">
+                <button id="btn" class="btn" onclick="autoplayswitch()"></button>
+            </div>
+    </div>
+</head>
+<body>
+</body>

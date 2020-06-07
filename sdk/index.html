@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="DolceSDK is an open Playstation Vita sdk for developing homebrew apps and plugins">
+    <meta name="keywords" content="psvita, sdk, Playstation Vita, dolcesdk, cbps, vitasdk, homebrew, development, plugins" />
+    <link rel="stylesheet" href="style.css">
+    <title>DolceSDK</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+      <h1>DolceSDK</h1>
+        <h2>Playstation Vita homebrew SDK</h2>
+
+        <section id="downloads">
+          
+          <a href="https://cbps.xyz" class="btn">Site</a>
+
+          <a href="http://forum.cbps.xyz" class="btn">Forum</a>
+          
+          <a href="http://discord.cbps.xyz" class="btn">Discord</a>
+
+          <a href="https://twitter.com/CBPS9"class="btn">Twitter</a>
+          
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <p>
+          DolceSDK is a homebrew SDK forked from VitaSDK due to the latter's glacial pace of development and incoherent policy on backward compatibility.
+          <br>DolceSDK favours correctness over backward compatibility. 
+          <br>DolceSDK can be installed alongside VitaSDK so it is possible to build projects using either. 
+        </p>
+
+<h1 id="getting-started">Getting Started</h1>
+
+<h2 id="prerequisite">Prerequisite</h2>
+
+<h3 id="linux">Linux</h3>
+
+<p>Install the following (adapt the command for your system): <code class="highlighter-rouge">apt-get install make git-core cmake python patch</code></p>
+
+<h3 id="osx">OSX</h3>
+
+<ol>
+  <li>Install either <a href="http://brew.sh">brew</a> or <a href="https://www.macports.org">MacPorts</a>
+</li>
+  <li>Run either <code class="highlighter-rouge">brew install wget cmake</code> or <code class="highlighter-rouge">port install wget cmake</code>.</li>
+</ol>
+
+<h3 id="windows">Windows</h3>
+
+<p>If you have <a href="https://msdn.microsoft.com/en-us/commandline/wsl/install_guide">Bash on Ubuntu on Windows</a>, then the recommended way is to follow the Linux directions above. Otherwise, continue reading.</p>
+
+<ol>
+  <li>Install <a href="http://repo.msys2.org/distrib/msys2-x86_64-latest.exe">msys2</a>
+</li>
+  <li>Run mingw64 shell and install the dependencies: <code class="highlighter-rouge">pacman -Su make git cmake tar mingw64/mingw-w64-x86_64-libwinpthread-git python patch</code>
+</li>
+</ol>
+
+<h2 id="installing">Installing</h2>
+
+<p>Set the environment variable <code class="highlighter-rouge">DOLCESDK</code> to be the install destination for DolceSDK. We recommend using <code class="highlighter-rouge">/usr/local/dolcesdk</code>. We also recommend making the change to your <code class="highlighter-rouge">.bashrc</code> or equivalent (<code class="highlighter-rouge">.bash_profile</code> on OSX) since using the toolchain requires <code class="highlighter-rouge">DOLCESDK</code> to be set.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export DOLCESDK=/usr/local/dolcesdk
+export PATH=$DOLCESDK/bin:$PATH # add dolcesdk tool to $PATH
+</code></pre></div></div>
+
+<p>Download the <a href="https://github.com/dolcesdk/ddpm">host package manager</a> and install to <code class="highlighter-rouge">$DOLCESDK</code></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/dolcesdk/ddpm
+cd ddpm
+./bootstrap-dolcesdk.sh
+./install-all.sh
+</code></pre></div></div>
+
+<p>This will install the toolchain and the most common libraries (including zlib, freetype, <a href="https://github.com/xerpi/libvita2d">libvita2d</a>, <a href="https://tai.henkaku.xyz/">taihen</a> and more).</p>
+
+<h2 id="updating">Updating</h2>
+
+<p>With DolceSDK installed and in your <code class="highlighter-rouge">PATH</code>, just run <code class="highlighter-rouge">dolcesdk-update</code> to get the latest toolchain build.</p>
+
+<h2 id="removing">Removing</h2>
+
+<p>To remove all traces of DolceSDK, just delete your <code class="highlighter-rouge">$DOLCESDK</code> directory. You can then reverse the steps in installing the prerequisite.</p>
+
+<h1 id="platform">Platform</h1>
+
+<h2 id="building">Changes over VitaSDK</h2>
+
+<p>
+<a href="https://forum.devchroma.nl/index.php?topic=129.0">See this forum thread here.</a>
+</p>
+
+<h2 id="writing-code">Writing Code</h2>
+
+<p>The <a href="https://docs.vitasdk.org/">APIs</a> are gathered from reversing the Vita’s firmware. It includes everything you can do with the system. It is recommended that you start by cloning the <a href="https://github.com/dolcesdk/samples">samples</a> and by reading through them and understanding them. The environment is POSIX but the true power comes from the Sony specific <a href="https://docs.vitasdk.org/">APIs</a>.</p>
+
+<h3 id="plugins-and-extensions">Plugins and Extensions</h3>
+
+<p>It is highly recommended that you are familiar with writing homebrews before attempting to write a plugin, which is significantly more difficult to do. Advanced developers can check out <a href="https://tai.henkaku.xyz/">taiHEN</a> for a substrate that allows you to hook system functions.</p>
+
+<h2 id="building">Building</h2>
+
+<p>Building is done with CMake and you should familiarize yourself with the <a href="https://github.com/dolcesdk/samples/blob/master/hello_world/CMakeLists.txt">hello world CMake file</a> to better understand how it works.
+  SELF is the executable format that the Vita runs and the included CMake macro <code class="highlighter-rouge">dolce_create_self</code> will build it for you. VPK is the homebrew package format and is an archive of the SELF along with data files and LiveArea and is done by the CMake macro <code class="highlighter-rouge">dolce_create_vpk</code>. VPK is what is installed to the Vita as a bubble.</p>
+
+<h2 id="running">Running</h2>
+
+<p>To run homebrew, you need a hacked Vita or PS TV.</p>
+
+<h2 id="porting-libraries">Porting libraries</h2>
+
+<p>DolceSDK ships with a flexible <code class="highlighter-rouge">makepkg</code>-based build system for building packages that can later be installed into the SDK. To get started, clone <a href="https://github.com/dolcesdk/packages">dolcesdk/packages</a>, <code class="highlighter-rouge">cd</code> into a directory with a <code class="highlighter-rouge">VITABUILD</code> file and run <code class="highlighter-rouge">dolce-makepkg</code>. Once the package is built, you can install it with <code class="highlighter-rouge">ddpm ./name-version-arm.tar.xz</code>.</p>
+
+<p>If you want to write your own <code class="highlighter-rouge">VITABUILD</code> file, here are a few examples that you can follow: <a href="https://github.com/dolcesdk/packages/blob/master/expat/VITABUILD">a library using autotools-style build</a>, <a href="https://github.com/dolcesdk/packages/blob/master/glm/VITABUILD">a library using CMake</a>, and <a href="https://github.com/dolcesdk/packages/blob/master/libsndfile/VITABUILD">a library where a Vita-specific patch is required</a>.</p>
+
+<h1 id="community">Community</h1>
+
+<p>Thanks to the <a href="https://github.com/orgs/vitasdk/people">VitaSDK team</a> for VitaSDK! The VitaSDK logo was designed by <a href="https://twitter.com/Acemad_">@Acemad_</a>.</p>
+
+<p>You can find most of us in the <a href="http://discord.cbps.xyz">CBPS Discord server</a>.</p>
+
+      </section>
+    </div>
+
+    
+  </body>
+</html>

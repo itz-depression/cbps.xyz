@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name=description content="Encyclical July 19th, 2019, dots_tb to the masses:
+    You have COMPLETELY misunderstood the idea of CBPS. CBPS is not hey guys take a look at this funny link ha ha. CBPS is not Vitahack's whiteknighting. CBPS is not Henkaku, Reddit or Twitter. CBPS is a place for people to be monsters. Disturbing, cold, heedless monsters that they really are. An Italian bans people on Henkaku and we laugh. Psychotic emo fulfills his sick desires with girls dying and we laugh. A man briccs vitas, we laugh and demand more. Suicide, foul play, genocide- we laugh. Racism, sexism, discrimination, xenophobia, rape and unfounded wrath- we laugh. we are cruel; we do not forgive; we do not forget; we are the real face of the vita hacking scene.">
+    <title>CBPS LIVES MATTER</title>
+    <style type="text/css">
+      .normal { font-size: 20px; }
+      .xbig { font-size: 40px; font-weight: bold; }
+      .big { font-size: 30px; }
+      a:link { color: blue; }
+      a:visited { color: blue; }
+    </style>
+
+    <script defer>
+      function getVote(int) {
+        if (window.XMLHttpRequest) {
+          
+          xmlhttp=new XMLHttpRequest();
+        } else {  
+          xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange=function() {
+          if (this.readyState==4 && this.status==200) {
+            document.getElementById("poll").innerHTML=this.responseText;
+          }
+        }
+        xmlhttp.open("GET","poll_vote.php?vote="+int,true);
+        xmlhttp.send();
+      }
+    </script>
+
+    <script async defer>
+      var audio = new Audio('sound/honk.aac');
+      document.addEventListener('click', function (event) {
+        if (event.target.closest('.modal')) return;
+        audio.play();
+      }, false);
+    </script>
+
+
+
+    <script async defer src="https://www.youtube.com/iframe_api"></script>
+    <script async defer src="https://cdn.rawgit.com/labnol/files/master/yt.js"></script>
+
+
+  </head> 
+  <!--You have COMPLETELY misunderstood the idea of CBPS. CBPS is not "hey guys take a look at this funny link ha ha." CBPS is not Vitahack's whiteknighting. CBPS is not Henkaku, Reddit or Twitter. CBPS is a place for people to be monsters. Disturbing, cold, heedless monsters that they really are. An Italian bans people on Henkaku and we laugh. Psychotic emo fulfills his sick desires with girls dying and we laugh. A man briccs vitas, we laugh and demand more. Suicide, foul play, genocide- we laugh. Racism, sexism, discrimination, xenophobia, rape and unfounded wrath- we laugh.
+  We are cruel; we do not forgive; we do not forget; we are the real face of the vita hacking scene-->
+  <body>
+    <center><br><br><br>
+      <img alt="title" alt="welcome" src="pics/homepage/sostitle.jpg" width="500" height="100"><br>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick" />
+<input type="hidden" name="hosted_button_id" value="D7VZ24FVJ9J9W" />
+<input type="image" src="https://cbps.xyz/pics/homepage/zozlogo.jpg" border="0" style="cursor: auto;" name="submit" />
+<img alt="" border="0" src="https://www.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1" />
+</form>
+
+      <div class="xbig">Celeste Brigade's Portal of Stuff:</div><br>
+
+      <div class="big">
+        <a href="http://forum.cbps.xyz"><b>CBPS Forum</b></a><br>
+        <a href="http://discord.cbps.xyz"><b>CBPS Discord</b></a><br>
+        <a href="https://twitter.com/CBPS9"><b>CBPS Twitter</b></a><br>
+        <a href="https://sdk.cbps.xyz"><b>DolceSDK</b></a><br>
+        <b>Official CBPS Minecraft Server:</b> mc.cbps.xyz
+      </div>
+
+      <div id="poll">
+        <h3>What Lives Matter The Most  </h3>
+        <form>
+          <label>ALL
+          <input type="radio" name="vote" value="0" onclick="getVote(this.value)">
+          </label>
+          <br><br><label>BLACK
+          <input type="radio" name="vote1" value="1" onclick="getVote(this.value)">
+          </label>
+        </form>
+      </div>
+
+      <div class="normal">
+        _______________________<br><br>
+        <div id="yt"></div>
+        <br>
+
+        <script async defer>
+          div = document.createElement("div");
+          div.setAttribute("data-video","1MfnHbZRYq0");
+          div.setAttribute("data-autoplay","1");
+          div.setAttribute("data-loop","1");
+          div.id = "youtube-audio";
+          document.getElementById("yt").appendChild(div);
+        </script>
+
+        
+        hosted by <a onclick="location.href='https://piv.pivpiv.dk'" href="#">this guy</a>
+        copyright CBPS 2020
+      </div>
+    </center>
+  </body>
+</html>
