@@ -99,13 +99,13 @@ echo('<div class="applist">');
 								if($hasExtraData && !$edit_mode)
 								{
 									echo('<div class="quick-download-area">
-											<a href="getdownload.php?id='.htmlspecialchars($csv[ID],ENT_QUOTES).'">
+											<a href="getdownload.php?id='.htmlspecialchars($csv[ID],ENT_QUOTES).'"  rel=”noreferrer”>
 												<div class="download-button" class="nostyle">
 													Download '.$itemName.'
 												</div>
 											</a>
 
-											<a href="getdownload.php?id='.htmlspecialchars($csv[DEPENDS],ENT_QUOTES).'">
+											<a href="getdownload.php?id='.htmlspecialchars($csv[DEPENDS],ENT_QUOTES).'"  rel=”noreferrer”>
 												<div class="download-button" class="nostyle">
 													Download DATA
 												</div>
@@ -115,7 +115,7 @@ echo('<div class="applist">');
 								else if(!$edit_mode)
 								{
 									echo('<div class="quick-download-area">
-											<a href="getdownload.php?id='.htmlspecialchars($csv[ID],ENT_QUOTES).'">
+											<a href="getdownload.php?id='.htmlspecialchars($csv[ID],ENT_QUOTES).'"  rel=”noreferrer”>
 												<div class="download-button" class="nostyle">
 													Download '.$itemName.'
 												</div>
@@ -125,7 +125,7 @@ echo('<div class="applist">');
 								else
 								{
 									echo('<div class="quick-download-area">
-											<a href="/edit_entry.php?id='.htmlspecialchars($csv[ID],ENT_QUOTES).'">
+											<a href="/edit_entry.php?id='.htmlspecialchars($csv[ID],ENT_QUOTES).'"  rel=”noreferrer”  >
 												<div class="download-button" class="nostyle">
 													Edit '.htmlspecialchars($csv[ID],ENT_QUOTES).'
 												</div>
@@ -187,13 +187,13 @@ echo('<div class="applist">');
 						if($hasExtraData)
 						{
 							echo('<div class="quick-download-area">
-									<a href=getdownload.php?id='.htmlspecialchars($csv[ID],ENT_QUOTES).'>
+									<a href=getdownload.php?id='.htmlspecialchars($csv[ID],ENT_QUOTES).' rel=”noreferrer” >
 										<div class="download-button" class="nostyle">
 											Download '.$itemName.'
 										</div>
 									</a>
 
-									<a href=getdownload.php?id='.htmlspecialchars($csv[DEPENDS],ENT_QUOTES).'>
+									<a href=getdownload.php?id='.htmlspecialchars($csv[DEPENDS],ENT_QUOTES).' rel=”noreferrer” >
 										<div class="download-button" class="nostyle">
 											Download DATA
 										</div>
@@ -203,7 +203,7 @@ echo('<div class="applist">');
 						else
 						{
 							echo('<div class="quick-download-area">
-									<a href=getdownload.php?id='.htmlspecialchars($csv[ID],ENT_QUOTES).'>
+									<a href=getdownload.php?id='.htmlspecialchars($csv[ID],ENT_QUOTES).' rel=”noreferrer”  >
 										<div class="download-button" class="nostyle">
 											Download '.$itemName.'
 										</div>
