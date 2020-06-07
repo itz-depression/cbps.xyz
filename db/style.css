@@ -1,0 +1,494 @@
+/*
+* header.php
+*/
+
+.sitename img {
+  vertical-align: top;
+}
+
+.sitename{
+	font-weight: bold;
+    float: left;
+}
+
+.sitemap{
+	position: relative;
+	float:right;
+	height: 100%;
+	margin: 0;
+	line-height: 120%;
+	font-weight: bold;
+}
+
+.sitemap-entry{
+	position:relative;
+	top: 0px;
+    color:#ffffff;
+	display: inline-block;
+    text-decoration:none;
+    padding: 0px 13px;
+	height: 100%;
+}
+ 
+ .sitemap-entry a{
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.sitemap-entry:hover{
+	color: white;
+	background-image: linear-gradient(#30434a, #19262b);
+	text-decoration: none;
+	cursor: pointer;
+}
+
+
+.header {
+	font-size: 200%;	
+	font-weight: bold;
+	color: white;	
+	height: 50px;
+	width: 100%;
+	margin: 0px;
+	background-image: linear-gradient(#4e7280, #30434a);
+}
+
+/*
+* submit.php
+*/
+
+.submit-box{
+	margin:10px;
+	top:50px;
+	width: 800px;
+	border: 1px solid #8d9fba;
+	height: 430px;
+	background-image: linear-gradient(#566d8f, #2c384a);
+	display: inline-block;
+	text-align: center;
+	position: relative;
+}
+
+.submit-form{
+	display:none;
+}
+
+.submit-action-icon{
+	position: relative; 
+	top:20px;
+	text-align:center;
+	width:100%;
+	height:145px; 
+}
+
+.submit-button{
+	position:relative;
+
+	color: white;
+	padding: 10px;
+	display: inline-block;
+	background-image: linear-gradient(#2f3d52, #141c29);
+	border: 1px solid #08101c;
+	box-sizing: border-box;
+}
+
+.submit-inputs{
+	position: relative;
+	top:20px;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+}
+
+
+.submit-button:hover, .submit-button:disabled{
+	background-image: linear-gradient(#1a2638, #0b1017);
+	cursor:pointer;
+}
+
+.submit-textarea{
+	position:relative;
+	top: 0px;
+	
+	vertical-align: top;
+	padding: 10px;
+	display: inline-block;
+	color: white;
+	border: 1px solid #08101c;
+	background-image: linear-gradient(#2f3d52, #141c29);
+	box-sizing: border-box;
+	resize: none;
+}
+.submit-captcha{
+	text-align: center;
+}
+.submit-progress-back{
+	position:relative;
+	display: inline-block;
+	height:30px;
+	width: 700px;
+	border: 1px solid #08101c;
+	background-image: linear-gradient(#2f3d52, #141c29);
+}
+
+.submit-progress-front{
+	position:relative;
+	top: 0px;
+	float: left;
+	display: inline-block;
+	height:100%;
+	width: 0px;
+	background-image: linear-gradient(#1a2638, #0b1017);
+}
+.g-recaptcha{
+	display: inline-block;
+}
+.submit-dropdown{
+	position:relative;
+	top: 0px;
+	
+	padding: 10px;
+	display: inline-block;
+	color: white;
+	border: 1px solid #08101c;
+	background-image: linear-gradient(#2f3d52, #141c29);
+	box-sizing: border-box;	
+}
+
+.submit-option{
+	position:relative;
+	margin:40px;
+	margin-top:30px;
+	width:200px;
+	height:350px;
+	background-image: linear-gradient(#2f3d52, #141c29);
+	display: inline-block;
+	border: 1px solid #08101c;
+	vertical-align: top;
+}
+
+.submit-status{
+	position:relative;
+	top:70px;
+}
+
+.submit-option:hover{
+	background-image: linear-gradient(#1a2638, #0b1017);
+	cursor:pointer;
+}
+
+.submit-skip{
+	position:absolute;
+	bottom: 1px;
+	right: 1px;
+}
+/*
+* index.php
+*/
+.applist{
+	text-align: center;
+}
+
+.version-select{
+	width:70px;
+	height:40px;
+	float:right;
+}
+.vita-app a:link, a:visited{
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.vita-src-download a:hover{
+	color: white;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.vita-app-icon{
+	position: absolute; 
+	top:2px;
+	left:0px;
+	text-align:center;
+	width:100%;
+	height:145px;
+}
+.vita-app-info{
+	position: absolute;
+	text-align: center;
+	width: 95%;
+	height: 70px;
+	top:150px;
+}
+
+.vita-app-page{
+	margin:20px;
+	margin-bottom:20px;
+	width: 85%;
+	border: 1px solid #8d9fba;
+	background-image: linear-gradient(#566d8f, #2c384a);
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+
+
+.vita-app-page-title{
+	position:relative;
+	top:55px;
+	font-size:200%;
+}
+.vita-entry-info{
+	position:relative;
+	margin-top:100px;
+	width: 100%;
+	text-align: center;
+}
+.vita-app-page-readme{
+	margin-left: 0px;
+	margin:	10px;
+	text-align:left;
+	position:relative;
+	width:98%;
+	background-image: linear-gradient(#2f3d52, #141c29);
+	border: 1px solid #08101c;
+	vertical-align: top;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+
+.vita-app-page a:link, a:visited{
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+.vita-app-page-readme a:link, a:visited{
+	color: white;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.vita-app-page-icon{
+	margin:10px;
+	float: left;
+}
+
+.vita-app{
+	padding: 5px;
+	width: 200px;
+	height: 250px;
+	margin: 10px;
+	background-image: linear-gradient(#566d8f, #2c384a);
+	color: white;
+	text-align: left;
+	display: inline-block;
+	border: 1px solid #8d9fba;
+	vertical-align: middle;
+	position: relative; 
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.vita-app:hover{
+	background-image: linear-gradient(#2f3d52, #141c29);
+	cursor: pointer;
+}
+
+.to-bottom{
+	position: absolute;
+	right:4px;
+	bottom: 2px;
+}
+
+.to-top{
+	position: absolute;
+	right:4px;
+	top: 2px;
+}
+
+.quick-download-area{
+	text-align: center;
+}
+
+
+.download-button:hover{
+	background-image: linear-gradient(#1a2638, #0b1017);
+}
+
+.download-button{
+	font-size: 80%;
+	border: 1px solid #08101c;
+	padding: 5px;
+	text-align:center;
+	background-image: linear-gradient(#2f3d52, #141c29);
+	margin:5px;
+}
+.vita-src-download{
+	font-size: 55%;
+	width: 200px;
+	text-align: right;
+	overflow: hidden;
+}
+
+
+/*
+*	devtools.php
+*/
+
+.devtoollist{
+	position: inherit;
+	margin-left: 15%; 
+	margin-right: 15%;
+	text-align:center;
+}
+
+.devtool{
+
+	padding:10px;
+	margin: 10px;
+	width: 325px;
+	border-radius: 1000px;
+	background-color: #00ffa9;
+	
+	display: inline-block;
+	vertical-align: middle;
+}
+.devtool:link, .devtool:visited, .devtool a{
+	text-decoration: none !important;
+	color: black;
+	/*font-size: 150%;*/
+	font-size: 25px;
+	font-weight: bold;
+	height:128px;
+	line-height: 120px;
+}
+
+.devtool:hover{
+	padding:10px;
+	margin: 10px;
+	width:325px;
+	height:128px;
+	border-radius: 1000px;
+	background-color: #005796;
+	cursor: pointer;
+	
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.devtool #textContent{
+	text-align: center;
+}
+
+.bubble{
+	border-radius: 100%;	
+	background-color: green;
+}
+
+/*
+* Common
+*/
+
+html,body,header {
+	margin: 0;
+	padding: 0;
+	background-image: linear-gradient(#1e2226, #000000);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color:white;
+}
+
+
+option{
+	color:black;
+}
+
+a.image{
+	text-decoration: none;
+}
+
+.mid{
+	vertical-align: middle;
+}
+
+.left{
+	float: left;	
+}
+
+.black:link, .black:visited, .black{
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+}
+.black:hover{
+	color: black;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.white:link, .white:visited, .white{
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.white:hover{
+	color: white;
+	font-weight: bold;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.nostyle:link, .nostyle:visited, .nostyle:hover, .nostyle, .nostyle a{
+	color: white;
+	font-weight: bold;
+	text-decoration: none !important;
+	cursor: pointer;
+}
+
+.button-enabled{
+	width: 300px;
+	height: 50px;
+	margin: 10px;
+	background-color: #00d0ff;
+	text-align: center;
+	font-weight: bold;
+	line-height: 50px;
+	float: left;
+	color: white;
+	border-radius: 20px;
+}
+
+.button-enabled:hover{
+	width: 300px;
+	height: 50px;
+	margin: 10px;
+	background-color: #005796;
+	text-align: center;
+	font-weight: bold;
+	line-height: 50px;
+	float: left;
+	cursor: pointer;
+	color: white;
+	border-radius: 20px;
+}
+
+.button-disabled{
+	
+	width: 300px;
+	height: 50px;
+	margin: 10px;
+	background-color: #8f9db7;
+	text-align: center;
+	line-height: 50px;
+	float: left;
+	font-weight: bold;
+	color: #cfd2d3;
+	cursor: arrow;
+	border-radius: 20px;
+}
